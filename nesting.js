@@ -317,7 +317,11 @@ var ship19 = starships[19].name
 ship19;
 
 // make an array of all the names of the ships
-var shipsNames //= starships.map()
+function getName(ship, index, array){
+    return ship.name
+}
+
+var shipsNames = starships.map(getName)
 shipsNames;
 
 // make an array of all the manufacturers DO NOT WORRY ABOUT DUPLICATES
@@ -329,8 +333,13 @@ var bigShips //= starships.filter()
 bigShips;
 
 // get an array of all the ships with a starship_class of Starfighter
-var myArmy //= starships.filter()
-myArmy;
+var myArmy = starships.filter(function(ship, index, arr){
+    return ship.starship_class === 'Starfighter'
+})
+var length = myArmy.length;
+length
+
+
 
 // find the total cost of all the ships
 var totalCost //= starships.reduce()
